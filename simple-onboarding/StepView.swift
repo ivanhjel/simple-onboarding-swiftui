@@ -12,11 +12,17 @@ struct StepView: View {
     let title: String
     let subtitle: String
     let buttonTitle: String
+    let image: String
     let action: () -> Void
     
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
+            Image(image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: .infinity, height: 320)
+                .padding(.bottom, 32)
             Text(title)
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -39,7 +45,7 @@ extension View {
 }
 
 #Preview {
-    StepView(title: "Test", subtitle: "Test", buttonTitle: "Next") {
+    StepView(title: "Test", subtitle: "Test", buttonTitle: "Next", image: "2") {
         print("lol")
     }
 }

@@ -27,17 +27,17 @@ struct ContentView: View {
         } else {
             TabView(selection: $index) {
                 
-                StepView(title: "First", subtitle: "Hello 1", buttonTitle: "Next") {
+                StepView(title: "First", subtitle: "Hello 1", buttonTitle: "Next", image: "1") {
                     index = .second
                 }
                 .tag(Steps.first)
                 
-                StepView(title: "Second", subtitle: "Hello 2", buttonTitle: "Next") {
+                StepView(title: "Second", subtitle: "Hello 2", buttonTitle: "Next", image: "2") {
                     index = .third
                 }
                 .tag(Steps.second)
                 
-                StepView(title: "Third", subtitle: "Hello 3", buttonTitle: "Finish") {
+                StepView(title: "Third", subtitle: "Hello 3", buttonTitle: "Finish", image: "3") {
                     onboardingComplete = true
                 }
                 .tag(Steps.third)
