@@ -21,7 +21,6 @@ struct StepView: View {
             Image(image)
                 .resizable()
                 .scaledToFit()
-                .frame(width: .infinity, height: 320)
                 .padding(.bottom, 32)
             Text(title)
                 .font(.largeTitle)
@@ -32,7 +31,7 @@ struct StepView: View {
                 .padding(.bottom, 32)
             Button(buttonTitle, action: action)
                 .myButtonStyle()
-                .padding(.horizontal, 32)
+                .padding(.horizontal, 64)
                 .padding(.bottom, 64)
         }
     }
